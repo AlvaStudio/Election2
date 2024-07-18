@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <ScrollView
+        android:id="@+id/detail_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/detail_linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+          <TextView
+              android:id="@+id/item_second_name"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Фамилия"
+              android:textColor="@color/black"
+              android:textStyle="bold"
+              android:textSize="26sp"
+              android:gravity="center"
+              android:layout_marginTop="10dp"/>
+
+          <TextView
+              android:id="@+id/item_name"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Имя Отчество"
+              android:textColor="@color/black"
+              android:textSize="22sp"
+              android:gravity="center" />
+
+          <ImageView
+              android:id="@+id/item_image"
+              android:layout_width="match_parent"
+              android:layout_height="200dp"
+              android:src="@drawable/default_img"
+              android:layout_marginLeft="10dp"
+              android:layout_marginTop="20dp"
+              android:layout_marginRight="10dp"/>
+
+          <TextView
+              android:id="@+id/item_party"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Партия"
+              android:textColor="@color/black"
+              android:textSize="22sp"
+              android:gravity="center" />
+
+          <TextView
+              android:id="@+id/item_desc"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Описание"
+              android:textColor="@color/black"
+              android:textSize="20sp"
+              android:padding="10dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
