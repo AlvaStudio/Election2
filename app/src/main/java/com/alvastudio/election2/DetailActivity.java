@@ -10,9 +10,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.alvastudio.election2.Classes.Constants;
+import com.alvastudio.election2.Controllers.ImageDownloadTask;
 import com.alvastudio.election2.Models.Item;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -36,12 +35,7 @@ public class DetailActivity extends AppCompatActivity {
         party.setText(item.getParty());
         desc.setText(item.getDesc());
 
-        Glide.with(this)
-                .load(Constants.HOST_IMAGES + item.getImage())
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .centerCrop()
-                .placeholder(R.drawable.default_img)
-                .into(imageView);
+        new ImageDownloadTask(imageView).execute(Constants.HOST_IMAGES + item.getImage());
     }
 
     @Override

@@ -10,11 +10,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alvastudio.election2.Classes.Constants;
+import com.alvastudio.election2.Controllers.ImageDownloadTask;
 import com.alvastudio.election2.MainActivity;
 import com.alvastudio.election2.Models.Item;
 import com.alvastudio.election2.R;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import java.util.ArrayList;
 
@@ -98,12 +97,7 @@ public class ItemsAdapter extends BaseAdapter {
         viewHolder.party.setText(item.getParty());
         viewHolder.votes.setText(String.valueOf(item.getVotes()));
 
-        Glide.with(viewGroup.getContext())
-                .load(Constants.HOST_IMAGES + item.getImage())
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .centerCrop()
-                .placeholder(R.drawable.default_img)
-                .into(viewHolder.image);
+        new ImageDownloadTask(viewHolder.image).execute(Constants.HOST_IMAGES + item.getImage());
 
         return view;
     }
