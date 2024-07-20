@@ -3,6 +3,9 @@ package com.alvastudio.election2.Classes;
 public class Constants {
     public static final String HOST = "https://adlibtech.ru/elections/api/";
     public static final String HOST_IMAGES = "https://adlibtech.ru/elections/upload_images/";
+
+    //public static final String HOST = "http://10.0.2.2/elections/api/";
+    //public static final String HOST_IMAGES = "http://10.0.2.2/elections/upload_images/";
     public static final String API_COMMAND_LIST = "getcandidates.php";
     public static final String API_PARAM_DEVICE_ID = "device_id";
     public static final String API_PARAM_DEVICE_NAME = "device_name";
